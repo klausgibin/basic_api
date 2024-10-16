@@ -18,7 +18,7 @@ ruff = "^0.6.9"
 ignr = "^2.2"
 
 [tool.ruff]
-line-length = 79
+line-length = 100
 extend-exclude = ['migrations']
 
 [tool.ruff.lint]
@@ -38,7 +38,7 @@ lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
 run = 'fastapi dev basic_api/app.py'
 run_internal = 'fastapi dev basic_api/app.py --host 0.0.0.0' ##disponibiliza na rede interna através do seu IP
-pre_test = 'task lint'
+pre_test = 'task format'
 test = 'pytest -s -x --cov=basic_api -vv'
 post_test = 'coverage html'
 
