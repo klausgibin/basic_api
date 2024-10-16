@@ -37,6 +37,7 @@ addopts = '-p no:warnings'
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
 run = 'fastapi dev basic_api/app.py'
+run_internal = 'fastapi dev basic_api/app.py --host 0.0.0.0' ##disponibiliza na rede interna através do seu IP
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=basic_api -vv'
 post_test = 'coverage html'
